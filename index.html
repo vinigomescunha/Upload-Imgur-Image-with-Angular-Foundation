@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Upload Imgur Image with Angular Foundation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <!--link rel="stylesheet" href="vendor/zurb/foundation/dist/foundation.min.css"-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body ng-app="imgurapp">
+    <div ng-controller="imgurController">
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+                <div class="off-canvas-content" data-off-canvas-content>
+                    <div class="callout primary">
+                        <div class="row column">
+                            <div class="medium-6 columns">
+                                <h3>Upload Imgur Image with Angular Foundation</h3>
+                                <p class="lead">This example require composer zurb/foundation see Readme .</p>
+                            </div>
+                            <div class="medium-6 columns">
+                                <label>Choose the file:</label>
+                                <input type="file" ng-model="file" accept="image/*" onchange="angular.element(this).scope().mydata.setImage(this.files[0]); angular.element(this).scope().$digest();" >
+                                <button class="button expanded" ng-disabled="mydata.disabled" ng-click="mydata.doClick(item, $event)">Submit</button>
+                            </div>
+                            <div class="medium-12 columns">
+                                <div data-alert class="alert-box {{mydata.response.status}} radius">{{mydata.response.text}}</div>
+                                <button class="button float-right" ng-click="mydata.exportinfo()">Export data</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row small-up-2 medium-up-3 large-up-4">
+                        <div class="text-center" ng-hide="mydata.images.length">
+                            Choose a image and start upload
+                        </div>
+                        <div class="column" ng-show="mydata.images.length" ng-repeat="item in mydata.images">
+                            <img class="thumbnail" src={{item.link}} />
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="medium-12 columns text-center">
+                            <h3>Upload Imgur Image with Angular Foundation</h3>
+                            <p>github.com @ vinigomescunha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-modal large-10 small-10 medium-10 columns popup" ng-show="mydata.exportdata.flag">
+                <div class="row">
+                    <div class="medium-6 text-center data-popup">
+                        Json Data<a href="#" class="close float-right" style="font-size: 25px;" ng-click="mydata.exportinfo.close()">×</a>
+                        <textarea style="min-height:200px" ng-model="mydata.exportdata.data">Loading...</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!--script src="vendor/zurb/foundation/dist/foundation.min.js"></script-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+</html>

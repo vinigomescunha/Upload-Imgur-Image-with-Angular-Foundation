@@ -1,0 +1,41 @@
+input[type="file"] {
+  background-color: #0475C0;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer; }
+
+.alert-box {
+  padding: 1.3rem;
+  border-width: 0 0 0 0.35rem; }
+
+.alert-box.radius {
+  border-radius: 0.6rem; }
+
+.alert-box.error {
+  border-left-color: #f22613;
+  background-color: #f77d71; }
+
+.alert-box.error strong {
+  color: #f22613; }
+
+.alert-box.success {
+  border-left-color: #87d37c;
+  background-color: #b7e5b0; }
+
+.alert-box.success strong {
+  color: #87d37c; }
+
+.popup {
+  width: 100% !important;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  background-color: rgba(131, 203, 252, 0.9);
+  color: #fff;
+  height: 100%; }
+
+.data-popup {
+  margin: 50px auto;
+  background-color: #084167;
+  padding: 10px 20px; }

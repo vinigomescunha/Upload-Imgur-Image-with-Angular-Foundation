@@ -1,9 +1,11 @@
 #Upload Imgur Image with Angular Foundation
 
 This example require zurb foundation to best layout results (version 6.1.2 is called from CDN)
+
 This example require angularjs to work (version 1.5.0 is called from CDN)
 
 /*************************************************************************************/
+
 Files to edit
 
 json/client.json 
