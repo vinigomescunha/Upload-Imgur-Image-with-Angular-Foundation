@@ -14,6 +14,9 @@ json/client.json
 
 http://api.imgur.com/#registerapp you will receive application id and application secret
 
+see rate limits
+https://api.imgur.com/#limits
+
 /*************************************************************************************/
 
 Installing foundation via composer (all components)
